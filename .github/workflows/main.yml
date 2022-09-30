@@ -65,6 +65,6 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          sudo docker pull ${{ secrets.USER }}/Infra
+          sudo docker pull ${{ secrets.USER }}/infra
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 ${{ secrets.USER }}/Infra
+          sudo docker run --rm -d -p 5000:5000 ${{ secrets.USER }}/infra
